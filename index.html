@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1>This Is Jeopardy</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="card text-left bg-transparent">
+                    <h3 class="card-header">
+                        Category: <span id="category"></span>
+                    </h3>
+                    <div class="card-body">
+                        <h5 class="card-title">VALUE: <span id="value"></span></h5>
+                        <h5 class="card-title">Question: <span id="question"></span></h5>
+                        <h5 class="card-title">Answer: <span id="answer" hidden></span></h5>
+                        <button class="btn btn-link text-warning" onclick="app.gameController.showAnswer()">Show
+                            answer</button>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <button type="button" class="btn btn-link text-warning"
+                            onclick="app.gameController.getApiGamedata()">Get Next
+                        </button>
+                        <h5>Score: <span id="score"></span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+    </div>
+
+
+    <div id="game-data"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+        integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
