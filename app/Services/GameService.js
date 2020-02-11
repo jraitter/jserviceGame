@@ -3,7 +3,7 @@ import Gamedata from "../Models/Gamedata.js";
 
 // @ts-ignore
 const _api = axios.create({
-  baseURL: "http://jservice.io/api",
+  baseURL: "//jservice.io/api",
   timeout: 3000
 });
 
